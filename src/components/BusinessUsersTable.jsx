@@ -1,54 +1,53 @@
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import profile1 from "../assets/profile1.png";
 import profile2 from "../assets/profile2.png";
 import profile3 from "../assets/profile3.png";
 import profile4 from "../assets/profile4.png";
 import profile5 from "../assets/profile5.png";
-import React, { useState } from 'react';
 import UserModal from './UserModal';
+import UsersDetailBusiness from './UsersDetailBusiness';
 
-const UserTable = () => {
+const BusinessUsersTable = () => {
+  const navigate = useNavigate();
+   const [isModalOpen, setIsModalOpen] = useState(false);
+   const closeModal = () =>setIsModalOpen(false);
+  const openModal = () => setIsModalOpen(true);
+
   const users = [
-    { name: 'John Bushmill', date: '26 September 2024', email: 'John123b@email.com', feeling: 'Energetic', avatar: profile1 },
-    { name: 'Sarah Thompson', date: '27 September 2024', email: 'Alice456c@email.com', feeling: 'Sad', avatar: profile2 },
-    { name: 'Michael Chang', date: '28 September 2024', email: 'Bob789d@email.com', feeling: 'Motivated', avatar: profile3 },
-    { name: 'Emily Rodriguez', date: '29 September 2024', email: 'Eve012e@email.com', feeling: 'Happy', avatar: profile4 },
-    { name: 'David Patel', date: '30 September 2024', email: 'Grace345f@email.com', feeling: 'Confused', avatar: profile5 },
+    { id: 1, name: 'John Bushmill', date: '26 September 2024', email: 'John123b@email.com', feeling: 'Energetic', time: '5hrs', avatar: profile1, noOfEmployees: 50 },
+    { id: 2, name: 'Sarah Thompson', date: '27 September 2024', email: 'Alice456c@email.com', feeling: 'Sad',time: '5hrs', avatar: profile2, noOfEmployees: 60 },
+    { id: 3, name: 'Michael Chang', date: '28 September 2024', email: 'Bob789d@email.com',feeling: 'Happy', time: '5hrs', avatar: profile3, noOfEmployees: 78 },
+    { id: 4, name: 'Emily Rodriguez', date: '29 September 2024', email: 'Eve012e@email.com', feeling: 'Confused',time: '5hrs', avatar: profile4, noOfEmployees: 52 },
+    { id: 5, name: 'David Patel', date: '30 September 2024', email: 'Grace345f@email.com', feeling: 'Energetic',time: '5hrs', avatar: profile5, noOfEmployees: 41 },
   ];
-
-  const [selectedUser, setSelectedUser] = useState(null);
 
   return (
     <div className="w-full font-manrope">
       {/* Header */}
-      <div className="flex justify-between items-center px-6 pt-2">
+      <div className="flex justify-between items-center px-6 ">
         <h2 className="text-[20px] font-semibold text-black-250">Total Users</h2>
-        <button className="flex items-center space-x-2 cursor-pointer font-medium text-sm text-gray-350 hover:text-gray-800 border border-gray-250 rounded-[10px] p-2">
+        <button className="cursor-pointer flex items-center space-x-2 font-medium text-sm text-gray-350 hover:text-gray-800 border border-gray-250 rounded-[10px] p-2">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0_2_3904)">
-              <path d="M18.3337 9.99984C18.3337 5.39746 14.6027 1.6665 10.0003 1.6665C5.39795 1.6665 1.66699 5.39746 1.66699 9.99984C1.66699 14.6022 5.39795 18.3332 10.0003 18.3332C14.6027 18.3332 18.3337 14.6022 18.3337 9.99984Z" stroke="#727A90" stroke-width="1.5" />
-              <path d="M7.5 10H12.5001" stroke="#727A90" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M8.33301 12.9165H11.6663" stroke="#727A90" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M6.66699 7.0835H13.3337" stroke="#727A90" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            </g>
-            <defs>
-              <clipPath id="clip0_2_3904">
-                <rect width="20" height="20" fill="white" />
-              </clipPath>
-            </defs>
+            <path d="M15 1.66699V3.33366M5 1.66699V3.33366" stroke="#727A90" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M9.99658 10.833H10.0041M9.99658 14.1663H10.0041M13.3262 10.833H13.3337M6.66699 10.833H6.67447M6.66699 14.1663H6.67447" stroke="#727A90" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M2.91699 6.66699H17.0837" stroke="#727A90" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M2.08301 10.2027C2.08301 6.57162 2.08301 4.75607 3.12644 3.62803C4.16987 2.5 5.84925 2.5 9.20801 2.5H10.7913C14.1501 2.5 15.8295 2.5 16.8729 3.62803C17.9163 4.75607 17.9163 6.57162 17.9163 10.2027V10.6307C17.9163 14.2617 17.9163 16.0773 16.8729 17.2053C15.8295 18.3333 14.1501 18.3333 10.7913 18.3333H9.20801C5.84925 18.3333 4.16987 18.3333 3.12644 17.2053C2.08301 16.0773 2.08301 14.2617 2.08301 10.6307V10.2027Z" stroke="#727A90" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M2.5 6.66699H17.5" stroke="#727A90" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
-          <span>Filters</span>
+          <span>Date</span>
         </button>
       </div>
 
       {/* Table */}
-      <div className="overflow-x-auto mt-4">
+      <div className="overflow-x-auto my-4">
         <table className="w-full text-left text-base text-gray-350">
           <thead className="border-b border-t border-gray-250 font-medium">
             <tr>
               <th className="py-4 px-4 font-medium">Name</th>
               <th className="py-4 px-4 font-medium">Onboarding Date</th>
-              <th className="py-4 px-4 font-medium">Email</th>
               <th className="py-4 px-4 font-medium">Last Feeling</th>
+              <th className="py-4 px-4 font-medium">Time spent</th>
               <th className="py-4 px-4 font-medium flex gap-2 items-center">Actions <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4.81039 6.75H13.1894C13.3377 6.75003 13.4827 6.79404 13.606 6.87645C13.7293 6.95886 13.8254 7.07598 13.8821 7.21301C13.9389 7.35003 13.9538 7.50081 13.9248 7.64627C13.8959 7.79174 13.8245 7.92536 13.7196 8.03025L9.53014 12.2197C9.38949 12.3603 9.19876 12.4393 8.99989 12.4393C8.80101 12.4393 8.61028 12.3603 8.46964 12.2197L4.28014 8.03025C4.17528 7.92536 4.10388 7.79174 4.07495 7.64627C4.04602 7.50081 4.06088 7.35003 4.11763 7.21301C4.17438 7.07598 4.27049 6.95886 4.39379 6.87645C4.5171 6.79404 4.66207 6.75003 4.81039 6.75Z" fill="#8E95A6" />
               </svg>
@@ -56,19 +55,19 @@ const UserTable = () => {
             </tr>
           </thead>
           <tbody>
-            {users.map((user, index) => (
-              <tr key={index} className="border-b border-gray-250 hover:bg-gray-50 text-black-150 font-medium">
-                <td className="py-4 px-4 flex items-center space-x-3">
-                  <img src={user.avatar} className="w-[40px] h-[40px] rounded-full bg-gray-200" />
+            {users.map((user) => (
+              <tr key={user.id} className="border-b border-gray-250 hover:bg-gray-50 text-black-150 font-medium">
+                <td className="py-4 px-4 flex flex-col space-y-1">
                   <span>{user.name}</span>
+                  <td className="text-gray-350">{user.email}</td>
                 </td>
                 <td className="py-4 px-4">{user.date}</td>
-                <td className="py-4 px-4 text-gray-350">{user.email}</td>
                 <td className="py-4 px-4">{user.feeling}</td>
+                <td className="py-4 px-4">{user.time}</td>
                 <td className="py-4 px-4">
                   <button
-                    className="bg-green-150 font-medium cursor-pointer text-white text-sm py-2 px-3 rounded-xl transition duration-200"
-                    onClick={() => setSelectedUser(user)}
+                    className="cursor-pointer bg-green-150 font-medium text-white text-sm py-2 px-3 rounded-xl transition duration-200"
+                    onClick={openModal}
                   >
                     View Details
                   </button>
@@ -80,7 +79,7 @@ const UserTable = () => {
       </div>
 
       {/* Pagination */}
-      <div className="flex justify-between items-center mt-4 text-sm text-gray-350 font-medium px-4">
+      <div className="flex justify-between items-center mt-4 text-sm text-gray-350 font-medium px-4 mb-4">
         <span>Showing 1–5 of 100</span>
         <div className="flex space-x-2">
           <button className="px-4 py-2 border border-gray-250 rounded-[10px] hover:bg-gray-100 flex items-center justify-center">
@@ -98,13 +97,9 @@ const UserTable = () => {
           </button>
         </div>
       </div>
-
-      {/* Modal */}
-      {selectedUser && (
-        <UserModal user={selectedUser} onClose={() => setSelectedUser(null)} />
-      )}
+      <UsersDetailBusiness isOpen={isModalOpen} onClose={closeModal}/>
     </div>
   );
 };
 
-export default UserTable;
+export default BusinessUsersTable;

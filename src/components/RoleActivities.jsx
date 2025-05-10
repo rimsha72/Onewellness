@@ -107,31 +107,31 @@ const RoleActivities = () => {
                 {/* Tabs Section */}
                 <div className="flex space-x-4 pb-2 mb-6">
                     <button
-                        className={`text-sm font-medium pb-4 ${activeTab === 'Help & Support' ? 'text-green-150 border-b-2 border-green-150' : 'text-gray-350'}`}
+                        className={`text-sm font-medium pb-4 cursor-pointer ${activeTab === 'Help & Support' ? 'text-green-150 border-b-2 border-green-150' : 'text-gray-350'}`}
                         onClick={() => setActiveTab('Help & Support')}
                     >
                         Help & Support
                     </button>
                     <button
-                        className={`text-sm font-medium pb-4 ${activeTab === 'Send Message' ? 'text-green-150 border-b-2 border-green-150' : 'text-gray-350'}`}
+                        className={`text-sm font-medium pb-4 cursor-pointer ${activeTab === 'Send Message' ? 'text-green-150 border-b-2 border-green-150' : 'text-gray-350'}`}
                         onClick={() => setActiveTab('Send Message')}
                     >
                         Send Message
                     </button>
                     <button
-                        className={`text-sm font-medium pb-4 ${activeTab === 'Subscriptions' ? 'text-green-150 border-b-2 border-green-150' : 'text-gray-350'}`}
+                        className={`text-sm font-medium pb-4 cursor-pointer ${activeTab === 'Subscriptions' ? 'text-green-150 border-b-2 border-green-150' : 'text-gray-350'}`}
                         onClick={() => setActiveTab('Subscriptions')}
                     >
                         Subscriptions
                     </button>
                     <button
-                        className={`text-sm font-medium pb-4 ${activeTab === 'Manage Businesses' ? 'text-green-150 border-b-2 border-green-150' : 'text-gray-350'}`}
+                        className={`text-sm font-medium pb-4 cursor-pointer ${activeTab === 'Manage Businesses' ? 'text-green-150 border-b-2 border-green-150' : 'text-gray-350'}`}
                         onClick={() => setActiveTab('Manage Businesses')}
                     >
                         Manage Businesses
                     </button>
                     <button
-                        className={`text-sm font-medium pb-4 ${activeTab === 'Manage Roles' ? 'text-green-150 border-b-2 border-green-150' : 'text-gray-350'}`}
+                        className={`text-sm font-medium pb-4 cursor-pointer ${activeTab === 'Manage Roles' ? 'text-green-150 border-b-2 border-green-150' : 'text-gray-350'}`}
                         onClick={() => setActiveTab('Manage Roles')}
                     >
                         Manage Roles

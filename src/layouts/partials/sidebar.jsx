@@ -19,6 +19,8 @@ import msg from "../../assets/msg.png";
 import button from "../../assets/graybutton.png";
 import support1 from "../../assets/support1.png";
 import support from "../../assets/support.png";
+import setting1 from "../../assets/setting1.png";
+import setting from "../../assets/setting.png";
 import NewMessageModal from '../../components/NewMessageModal';
 
 export default function Sidebar({ setIsAuthenticated }) {
@@ -83,7 +85,7 @@ export default function Sidebar({ setIsAuthenticated }) {
         <button
           type="button"
           onClick={() => setShowMenu(true)}
-          className="flex items-center p-2 border-0 text-sm rounded-xl transition-all duration-300 hover:bg-gray-100 hover:scale-105 animate-bounce-hover"
+          className="flex items-center cursor-pointer p-2 border-0 text-sm rounded-xl transition-all duration-300 hover:bg-gray-100 hover:scale-105 animate-bounce-hover"
         >
           <span className="sr-only">Open sidebar</span>
           <svg
@@ -113,7 +115,7 @@ export default function Sidebar({ setIsAuthenticated }) {
         <div className="h-full font-sans relative flex flex-col min-h-screen">
           <div className="flex-none">
             <button
-              className="lg:hidden absolute right-4 top-4 text-xl text-black transition-all duration-200 hover:scale-125 hover:text-gray-800 animate-bounce-vertical-hover"
+              className="lg:hidden absolute cursor-pointer right-4 top-4 text-xl text-black transition-all duration-200 hover:scale-125 hover:text-gray-800 animate-bounce-vertical-hover"
               onClick={() => setShowMenu(false)}
             >
               <RiCloseFill />
@@ -132,7 +134,7 @@ export default function Sidebar({ setIsAuthenticated }) {
                 <img
                   src={button}
                   alt="Toggle Sidebar"
-                  className="transition-transform duration-300 hover:scale-101"
+                  className="transition-transform duration-300 cursor-pointer hover:scale-101"
                 />
               </button>
             </div>
@@ -191,7 +193,7 @@ export default function Sidebar({ setIsAuthenticated }) {
               </li>
               <li>
                 <NavLink
-                  to="/trades"
+                  to="/businesses"
                   className={({ isActive }) =>
                     `flex items-center p-4 rounded-xl transition-all duration-100 hover:bg-gray-100 hover:scale-[1.02] animate-bounce-hover ${isActive ? 'bg-green-150/20 text-green-150' : 'text-black-250'
                     }`
@@ -215,7 +217,7 @@ export default function Sidebar({ setIsAuthenticated }) {
               </li>
               <li>
                 <NavLink
-                  to="/collectibles"
+                  to="/analytics"
                   className={({ isActive }) =>
                     `flex items-center p-4 rounded-xl transition-all duration-100 hover:bg-gray-100 hover:scale-[1.02] animate-bounce-hover ${isActive ? 'bg-green-150/20 text-green-150' : 'text-black-250'
                     }`
@@ -239,7 +241,7 @@ export default function Sidebar({ setIsAuthenticated }) {
               </li>
               <li>
                 <NavLink
-                  to="/categories"
+                  to="/subscription"
                   className={({ isActive }) =>
                     `flex items-center p-4 rounded-xl transition-all duration-100 hover:bg-gray-100 hover:scale-[1.02] animate-bounce-hover ${isActive ? 'bg-green-150/20 text-green-150' : 'text-black-250'
                     }`
@@ -263,7 +265,31 @@ export default function Sidebar({ setIsAuthenticated }) {
               </li>
               <li>
                 <NavLink
-                  to="/support"
+                  to="/settings"
+                  className={({ isActive }) =>
+                    `flex items-center p-4 rounded-xl transition-all duration-100 hover:bg-gray-100 hover:scale-[1.02] animate-bounce-hover ${isActive ? 'bg-green-150/20 text-green-150' : 'text-black-250'
+                    }`
+                  }
+                >
+                  {({ isActive }) => (
+                    <div className={`flex items-center ${isCollapsed ? 'justify-center w-full' : ''}`}>
+                      <img
+                        src={isActive ? setting1  : setting}
+                        alt="Research Icon"
+                        className="h-5 w-5 transition-transform duration-100 hover:scale-110 animate-bounce-hover"
+                      />
+                      {!isCollapsed && (
+                        <span className="flex-1 ml-3 whitespace-nowrap transition-colors duration-100 hover:text-gray-800">
+                          Setting
+                        </span>
+                      )}
+                    </div>
+                  )}
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/research"
                   className={({ isActive }) =>
                     `flex items-center p-4 rounded-xl transition-all duration-100 hover:bg-gray-100 hover:scale-[1.02] animate-bounce-hover ${isActive ? 'bg-green-150/20 text-green-150' : 'text-black-250'
                     }`
@@ -285,6 +311,7 @@ export default function Sidebar({ setIsAuthenticated }) {
                   )}
                 </NavLink>
               </li>
+            
             </ul>
           </div>
 
@@ -299,7 +326,7 @@ export default function Sidebar({ setIsAuthenticated }) {
                 <button
                   type="button"
                   onClick={openModal}
-                  className="bg-green-150 cursor-pointer w-full rounded-[12px] py-2 text-white font-medium text-sm text-center transition duration-300 ease-in-out transform hover:scale-105"
+                  className="bg-green-150  cursor-pointer w-full rounded-[12px] py-2 text-white font-medium text-sm text-center transition duration-300 ease-in-out transform hover:scale-105"
                 >
                   New message
                 </button>

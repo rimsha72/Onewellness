@@ -9,7 +9,7 @@ const CreatePostModal = ({ isOpen, onClose }) => {
                 <div className="flex justify-between items-center mb-4 w-full border-b border-gray-250 pb-4">
                     <h2 className="text-base sm:text-lg font-medium text-black-150 w-full">Create Post</h2>
                     <button
-                        className="text-gray-500 hover:text-gray-700"
+                        className="text-gray-500 cursor-pointer hover:text-gray-700"
                         onClick={onClose}
                     >
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -36,7 +36,7 @@ const CreatePostModal = ({ isOpen, onClose }) => {
                                 placeholder="Write your text here"
                                 className="w-full p-3 border border-gray-250 rounded-xl text-sm text-gray-350 font-medium focus:outline-none focus:ring-1 focus:ring-green-150 h-[231px] resize-none pr-20"
                             />
-                            <button className="flex items-center gap-2 text-sm text-black bg-green-450 rounded-[9px] px-4 py-3 font-medium absolute left-4 bottom-6">
+                            <button className=" cursor-pointer flex items-center gap-2 text-sm text-black bg-green-450 rounded-[9px] px-4 py-3 font-medium absolute left-4 bottom-6">
                                 <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8.51752 20.4723H14.0495C18.6596 20.4723 20.5036 18.6283 20.5036 14.0183V8.48627C20.5036 3.87624 18.6596 2.03223 14.0495 2.03223H8.51752C3.90749 2.03223 2.06348 3.87624 2.06348 8.48627V14.0183C2.06348 18.6283 3.90749 20.4723 8.51752 20.4723Z" stroke="#292D32" stroke-width="1.38301" stroke-linecap="round" stroke-linejoin="round" />
                                     <path d="M8.51784 9.40824C9.53626 9.40824 10.3619 8.58265 10.3619 7.56423C10.3619 6.54581 9.53626 5.72021 8.51784 5.72021C7.49942 5.72021 6.67383 6.54581 6.67383 7.56423C6.67383 8.58265 7.49942 9.40824 8.51784 9.40824Z" stroke="#292D32" stroke-width="1.38301" stroke-linecap="round" stroke-linejoin="round" />
@@ -51,7 +51,7 @@ const CreatePostModal = ({ isOpen, onClose }) => {
                 <div className="flex justify-end mt-6">
                     <button
                         onClick={onClose}
-                        className="bg-green-150 text-white text-sm font-medium py-3 px-4 rounded-xl hover:bg-green-150/80 transition duration-200"
+                        className="bg-green-150 cursor-pointer text-white text-sm font-medium py-3 px-4 rounded-xl hover:bg-green-150/80 transition duration-200"
                     >
                         Post in Community
                     </button>

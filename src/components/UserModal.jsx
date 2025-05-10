@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import OverviewDashboard from './OverviewDashboard';
 import Posts from './Posts';
 import Subscription from './Subscription';
 
@@ -10,7 +9,7 @@ const UserModal = ({ user, onClose }) => {
         <div className="fixed inset-0 bg-black-150/20 flex items-center justify-center z-50">
             <div className="bg-white rounded-lg shadow-lg w-full max-w-[950px] p-4 sm:p-6 md:p-8 relative overflow-y-auto h-screen sm:h-auto max-h-[90vh] sm:max-h-[80vh]">
                 <button
-                    className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+                    className="absolute top-4 cursor-pointer right-4 text-gray-500 hover:text-gray-700 cursor-pointer"
                     onClick={onClose}
                 >
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -48,7 +47,7 @@ const UserModal = ({ user, onClose }) => {
                     {/* Tabs Navigation */}
                     <div className="flex border border-green-150 rounded-[16px] p-1 bg-white max-w-[206px]">
                         <button
-                            className={`flex-1 py-2 sm:py-3 px-2 sm:px-4 text-xs sm:text-sm font-semibold rounded-[12px] transition-colors duration-200 ${activeTab === 'posts'
+                            className={`flex-1 cursor-pointer py-2 sm:py-3 px-2 sm:px-4 text-xs sm:text-sm font-semibold rounded-[12px] transition-colors duration-200 ${activeTab === 'posts'
                                 ? 'bg-green-150 text-white'
                                 : 'bg-transparent text-black-350 hover:bg-gray-100'
                                 }`}
@@ -57,7 +56,7 @@ const UserModal = ({ user, onClose }) => {
                             Posts
                         </button>
                         <button
-                            className={`flex-1 py-2 sm:py-3 px-2 sm:px-4 text-xs sm:text-sm font-semibold rounded-[12px] transition-colors duration-200 ${activeTab === 'subscriptions'
+                            className={`flex-1 cursor-pointer py-2 sm:py-3 px-2 sm:px-4 text-xs sm:text-sm font-semibold rounded-[12px] transition-colors duration-200 ${activeTab === 'subscriptions'
                                 ? 'bg-green-150 text-white'
                                 : 'bg-transparent text-black-350 hover:bg-gray-100'
                                 }`}
@@ -82,7 +81,7 @@ const UserModal = ({ user, onClose }) => {
                     </div>
                 </div>
                 <div className='flex justify-end w-full'>
-                    <button className="mt-4 sm:mt-6 bg-green-150 text-white py-2 sm:py-3 px-8 rounded-xl hover:bg-green-200 transition duration-200 text-xs sm:text-sm ">
+                    <button className="mt-4 sm:mt-6  bg-green-150 cursor-pointer text-white py-2 sm:py-3 px-8 rounded-xl transition duration-200 text-xs sm:text-sm ">
                         Done
                     </button>
                 </div>

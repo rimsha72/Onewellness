@@ -17,7 +17,7 @@ export default function Posts() {
                                     <p className="text-xs text-gray-550 font-medium mt-2">20 min ago</p>
                                 </div>
                             </div>
-                            <button className="text-gray-500 hover:text-gray-700">
+                            <button className="text-gray-500 hover:text-gray-700 cursor-pointer">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M13.5 4.5C13.5 3.67157 12.8284 3 12 3C11.1716 3 10.5 3.67157 10.5 4.5C10.5 5.32843 11.1716 6 12 6C12.8284 6 13.5 5.32843 13.5 4.5Z" stroke="black" stroke-width="1.5" />
                                     <path d="M13.5 12C13.5 11.1716 12.8284 10.5 12 10.5C11.1716 10.5 10.5 11.1716 10.5 12C10.5 12.8284 11.1716 13.5 12 13.5C12.8284 13.5 13.5 12.8284 13.5 12Z" stroke="black" stroke-width="1.5" />
@@ -59,7 +59,7 @@ export default function Posts() {
                                     <p className="text-xs text-gray-550 font-medium mt-2">20 min ago</p>
                                 </div>
                             </div>
-                            <button className="text-gray-500 hover:text-gray-700">
+                            <button className="text-gray-500 hover:text-gray-700 cursor-pointer">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M13.5 4.5C13.5 3.67157 12.8284 3 12 3C11.1716 3 10.5 3.67157 10.5 4.5C10.5 5.32843 11.1716 6 12 6C12.8284 6 13.5 5.32843 13.5 4.5Z" stroke="black" stroke-width="1.5" />
                                     <path d="M13.5 12C13.5 11.1716 12.8284 10.5 12 10.5C11.1716 10.5 10.5 11.1716 10.5 12C10.5 12.8284 11.1716 13.5 12 13.5C12.8284 13.5 13.5 12.8284 13.5 12Z" stroke="black" stroke-width="1.5" />
@@ -101,7 +101,7 @@ export default function Posts() {
                                     <p className="text-xs text-gray-550 font-medium mt-2">20 min ago</p>
                                 </div>
                             </div>
-                            <button className="text-gray-500 hover:text-gray-700">
+                            <button className="text-gray-500 hover:text-gray-700 cursor-pointer">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M13.5 4.5C13.5 3.67157 12.8284 3 12 3C11.1716 3 10.5 3.67157 10.5 4.5C10.5 5.32843 11.1716 6 12 6C12.8284 6 13.5 5.32843 13.5 4.5Z" stroke="black" stroke-width="1.5" />
                                     <path d="M13.5 12C13.5 11.1716 12.8284 10.5 12 10.5C11.1716 10.5 10.5 11.1716 10.5 12C10.5 12.8284 11.1716 13.5 12 13.5C12.8284 13.5 13.5 12.8284 13.5 12Z" stroke="black" stroke-width="1.5" />
@@ -143,7 +143,7 @@ export default function Posts() {
                                     <p className="text-xs text-gray-550 font-medium mt-2">20 min ago</p>
                                 </div>
                             </div>
-                            <button className="text-gray-500 hover:text-gray-700">
+                            <button className="text-gray-500 hover:text-gray-700 cursor-pointer">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M13.5 4.5C13.5 3.67157 12.8284 3 12 3C11.1716 3 10.5 3.67157 10.5 4.5C10.5 5.32843 11.1716 6 12 6C12.8284 6 13.5 5.32843 13.5 4.5Z" stroke="black" stroke-width="1.5" />
                                     <path d="M13.5 12C13.5 11.1716 12.8284 10.5 12 10.5C11.1716 10.5 10.5 11.1716 10.5 12C10.5 12.8284 11.1716 13.5 12 13.5C12.8284 13.5 13.5 12.8284 13.5 12Z" stroke="black" stroke-width="1.5" />
@@ -185,7 +185,7 @@ export default function Posts() {
                                     <p className="text-xs text-gray-550 font-medium mt-2">20 min ago</p>
                                 </div>
                             </div>
-                            <button className="text-gray-500 hover:text-gray-700">
+                            <button className="text-gray-500 hover:text-gray-700 cursor-pointer">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M13.5 4.5C13.5 3.67157 12.8284 3 12 3C11.1716 3 10.5 3.67157 10.5 4.5C10.5 5.32843 11.1716 6 12 6C12.8284 6 13.5 5.32843 13.5 4.5Z" stroke="black" stroke-width="1.5" />
                                     <path d="M13.5 12C13.5 11.1716 12.8284 10.5 12 10.5C11.1716 10.5 10.5 11.1716 10.5 12C10.5 12.8284 11.1716 13.5 12 13.5C12.8284 13.5 13.5 12.8284 13.5 12Z" stroke="black" stroke-width="1.5" />

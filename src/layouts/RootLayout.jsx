@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "./partials/sidebar";
-import Header from "./partials/Header";
+import Header from "./partials/header";
 import { useState, useEffect } from "react";
 
 export default function RootLayout({ setIsAuthenticated }) {

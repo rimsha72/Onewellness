@@ -24,7 +24,7 @@ const SetRolesModal = ({ isOpen, onClose }) => {
         <div className="fixed inset-0 bg-black-150/20 flex items-center justify-center z-50">
             <div className="bg-white rounded-lg shadow-lg w-full max-w-[950px] p-4 sm:p-6 md:p-8 relative overflow-y-auto h-screen sm:h-auto max-h-[90vh] sm:max-h-[80vh]">
                 <button
-                    className="absolute top-6 right-4 text-gray-500 hover:text-gray-700"
+                    className="absolute top-6 cursor-pointer right-4 text-gray-500 hover:text-gray-700"
                     onClick={onClose}
                 >
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -162,7 +162,7 @@ const SetRolesModal = ({ isOpen, onClose }) => {
                 <div className="flex justify-end mt-6">
                     <button
                         onClick={onClose}
-                        className="bg-green-150 text-white text-sm font-medium py-3 px-4 rounded-xl hover:bg-green-150/80 transition duration-200"
+                        className="bg-green-150 cursor-pointer text-white text-sm font-medium py-3 px-4 rounded-xl hover:bg-green-150/80 transition duration-200"
                     >
                         Add Role
                     </button>

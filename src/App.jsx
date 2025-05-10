@@ -6,6 +6,14 @@ import Home from "./pages/Home";
 import ForgetPassword from "./pages/ForgetPassword";
 import Verify from "./pages/Verify";
 import Roles from "./pages/Roles";
+import Businesses from "./pages/Businesses";
+import BusinessDetails from "./pages/BusinessDetails";
+import Analytics from "./pages/Analytics";
+import Subscription from "./pages/Subscription";
+import Settings from "./pages/Settings";
+import Research from "./pages/Research";
+import Support from "./pages/Support";
+import ChatDetails from "./pages/ChatDetail";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -66,6 +74,14 @@ function App() {
       >
         <Route index element={<Home />} />
         <Route path="/roles" element={<Roles />} />
+        <Route path="/businesses" element={<Businesses />} />
+        <Route path="/businesses/:id" element={<BusinessDetails />} />
+        <Route path="/analytics" element={<Analytics />} />
+        <Route path="/subscription" element={<Subscription />} />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="/research" element={<Research />} />
+        <Route path="/support" element={<Support />} />
+        <Route path="/support/:id" element={<ChatDetails />} />
       </Route>
     </Routes>
   );

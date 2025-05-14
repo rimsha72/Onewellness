@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import profile1 from "../assets/profile1.png";
 import profile2 from "../assets/profile2.png";
 import profile3 from "../assets/profile3.png";
 import profile4 from "../assets/profile4.png";
 import profile5 from "../assets/profile5.png";
+import FilterModal from './FilterModal';
 
 const BusinessTable = () => {
   const navigate = useNavigate();
+  const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
 
   const users = [
     { id: 1, name: 'John Bushmill', date: '26 September 2024', email: 'John123b@email.com', subscription: 'Annual - $150', avatar: profile1, noOfEmployees: 50 },
@@ -26,7 +28,7 @@ const BusinessTable = () => {
       {/* Header */}
       <div className="flex justify-between items-center px-6 py-4">
         <h2 className="text-[20px] font-semibold text-black-250">All Businesses</h2>
-        <button className="cursor-pointer flex items-center space-x-2 font-medium text-sm text-gray-350 hover:text-gray-800 border border-gray-250 rounded-[10px] p-2">
+        <button onClick={() => setIsFilterModalOpen(true)} className="cursor-pointer flex items-center space-x-2 font-medium text-sm text-gray-350 hover:text-gray-800 border border-gray-250 rounded-[10px] p-2">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M15 1.66699V3.33366M5 1.66699V3.33366" stroke="#727A90" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             <path d="M9.99658 10.833H10.0041M9.99658 14.1663H10.0041M13.3262 10.833H13.3337M6.66699 10.833H6.67447M6.66699 14.1663H6.67447" stroke="#727A90" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -96,6 +98,9 @@ const BusinessTable = () => {
           </button>
         </div>
       </div>
+      {isFilterModalOpen && (
+        <FilterModal onClose={() => setIsFilterModalOpen(false)} />
+      )}
     </div>
   );
 };

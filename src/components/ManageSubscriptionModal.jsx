@@ -5,7 +5,7 @@ const ManageSubscriptionModal = ({ isOpen, onClose }) => {
 
     return (
         <div className="fixed inset-0 bg-black-150/20 flex items-center justify-center z-50">
-            <div className="bg-white rounded-lg shadow-lg w-full max-w-[750px] p-4 sm:p-6 md:p-8 relative overflow-y-auto h-screen sm:h-auto max-h-[90vh] sm:max-h-[80vh]">
+            <div className="bg-white rounded-lg shadow-3xl w-full max-w-[750px] p-4 sm:p-6 md:p-8 absolute top-6 right-6 overflow-y-auto h-screen sm:h-auto max-h-[90vh] sm:max-h-[80vh]">
                 {/* Header */}
                 <div className="flex justify-between items-center mb-6">
                     <h2 className="text-lg font-medium text-gray-800">Manage Subscription</h2>

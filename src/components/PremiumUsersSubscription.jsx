@@ -5,6 +5,7 @@ import profile4 from "../assets/profile4.png";
 import profile5 from "../assets/profile5.png";
 import React, { useState } from 'react';
 import UserDetailSubscription from "./UserDetailSubscription";
+import FilterModal from "./FilterModal";
 
 const PremiumUsersSubscription = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -19,7 +20,7 @@ const PremiumUsersSubscription = () => {
         setIsModalOpen(false);
         setSelectedUser(null);
     };
-
+ const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
     const users = [
         { name: 'John Bushmill', date: '26 September 2024', email: 'John123b@email.com', enddate: '9 November 2024', avatar: profile1 },
         { name: 'Sarah Thompson', date: '27 September 2024', email: 'Alice456c@email.com', enddate: '9 November 2024', avatar: profile2 },
@@ -34,7 +35,7 @@ const PremiumUsersSubscription = () => {
                 {/* Header */}
                 <div className="flex justify-between items-center px-6 pt-2">
                     <h2 className="text-[20px] font-semibold text-black-250">Premium Users</h2>
-                    <button className="flex items-center space-x-2 cursor-pointer font-medium text-sm text-gray-350 hover:text-gray-800 border border-gray-250 rounded-[10px] p-2">
+                    <button  onClick={() => setIsFilterModalOpen(true)} className="flex items-center space-x-2 cursor-pointer font-medium text-sm text-gray-350 hover:text-gray-800 border border-gray-250 rounded-[10px] p-2">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_2_3904)">
                                 <path d="M18.3337 9.99984C18.3337 5.39746 14.6027 1.6665 10.0003 1.6665C5.39795 1.6665 1.66699 5.39746 1.66699 9.99984C1.66699 14.6022 5.39795 18.3332 10.0003 18.3332C14.6027 18.3332 18.3337 14.6022 18.3337 9.99984Z" stroke="#727A90" stroke-width="1.5" />
@@ -112,6 +113,9 @@ const PremiumUsersSubscription = () => {
                 </div>
             </div>
             <UserDetailSubscription isOpen={isModalOpen} onClose={closeModal} user={selectedUser} />
+            {isFilterModalOpen && (
+                <FilterModal onClose={() => setIsFilterModalOpen(false)} />
+            )}
         </div>
     );
 };

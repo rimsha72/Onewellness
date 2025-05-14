@@ -6,7 +6,7 @@ const NewMessageModal = ({ isOpen, onClose }) => {
 
   return ReactDOM.createPortal(
     <div className="fixed inset-0 bg-black-150/20 flex items-center justify-center z-50">
-    <div className="bg-white rounded-lg shadow-lg w-full max-w-[950px] p-4 sm:p-6 md:p-6 relative overflow-y-auto h-screen sm:h-auto max-h-[90vh] sm:max-h-[80vh]">
+    <div className="bg-white rounded-3xl shadow-lg w-full max-w-[950px] p-4 sm:p-6 md:p-6 absolute top-6 right-6 overflow-y-auto h-screen sm:h-auto max-h-[90vh] sm:max-h-[80vh]">
         <div className="flex justify-between items-center mb-4 w-full border-b border-gray-250 pb-4">
             <h2 className="text-base sm:text-lg font-medium text-black-150 w-full">Add new Message</h2>
             <button

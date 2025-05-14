@@ -3,7 +3,8 @@ import profile2 from "../assets/profile2.png";
 import profile3 from "../assets/profile3.png";
 import profile4 from "../assets/profile4.png";
 import profile5 from "../assets/profile5.png";
-import React from 'react';
+import React, { useState } from 'react';
+import FilterModal from "./FilterModal";
 
 const PremiumUsers = () => {
     const users = [
@@ -13,13 +14,13 @@ const PremiumUsers = () => {
         { name: 'Emily Rodriguez', date: '29 September 2024', email: 'Eve012e@email.com', feeling: 'Happy', avatar: profile4 },
         { name: 'David Patel', date: '30 September 2024', email: 'Grace345f@email.com', feeling: 'Confused', avatar: profile5 },
     ];
-
+    const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
     return (
         <div className="w-full font-manrope">
             {/* Header */}
             <div className="flex justify-between items-center px-6 pt-2">
                 <h2 className="text-[20px] font-semibold text-black-250">Premium Users</h2>
-                <button className="flex items-center space-x-2 cursor-pointer font-medium text-sm text-gray-350 hover:text-gray-800 border border-gray-250 rounded-[10px] p-2">
+                <button onClick={() => setIsFilterModalOpen(true)} className="flex items-center space-x-2 cursor-pointer font-medium text-sm text-gray-350 hover:text-gray-800 border border-gray-250 rounded-[10px] p-2">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_2_3904)">
                             <path d="M18.3337 9.99984C18.3337 5.39746 14.6027 1.6665 10.0003 1.6665C5.39795 1.6665 1.66699 5.39746 1.66699 9.99984C1.66699 14.6022 5.39795 18.3332 10.0003 18.3332C14.6027 18.3332 18.3337 14.6022 18.3337 9.99984Z" stroke="#727A90" stroke-width="1.5" />
@@ -94,6 +95,9 @@ const PremiumUsers = () => {
 
                 </div>
             </div>
+            {isFilterModalOpen && (
+                <FilterModal onClose={() => setIsFilterModalOpen(false)} />
+            )}
         </div>
     );
 };

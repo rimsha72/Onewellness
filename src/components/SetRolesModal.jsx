@@ -22,7 +22,7 @@ const SetRolesModal = ({ isOpen, onClose }) => {
 
     return ReactDOM.createPortal(
         <div className="fixed inset-0 bg-black-150/20 flex items-center justify-center z-50">
-            <div className="bg-white rounded-lg shadow-lg w-full max-w-[950px] p-4 sm:p-6 md:p-8 relative overflow-y-auto h-screen sm:h-auto max-h-[90vh] sm:max-h-[80vh]">
+            <div className="bg-white rounded-3xl shadow-lg w-full max-w-[950px] p-4 sm:p-6 md:p-8 absolute top-6 right-6 overflow-y-auto h-screen sm:h-auto max-h-[90vh] sm:max-h-[80vh]">
                 <button
                     className="absolute top-6 cursor-pointer right-4 text-gray-500 hover:text-gray-700"
                     onClick={onClose}
